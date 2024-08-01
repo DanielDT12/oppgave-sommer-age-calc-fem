@@ -12,5 +12,60 @@
 		<script src="index.js" defer></script>
 		<title>Frontend Mentor | Age Calculator App</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="calculator">
+			<form class="flex" action="" id="age-calculator-form">
+				<label class="calculator__label | flex-column" for="day"
+					>Day
+					<input
+						class="calculator__input"
+						type="number"
+						name="Day"
+						id="day"
+						required
+						placeholder="DD"
+					/>
+				</label>
+				<label class="calculator__label | flex-column" for="month"
+					>Month
+					<input
+						class="calculator__input"
+						type="number"
+						name="Month"
+						id="month"
+						required
+						placeholder="MM"
+					/>
+				</label>
+				<label class="calculator__label | flex-column" for="year"
+					>Year
+					<input
+						class="calculator__input"
+						type="number"
+						name="Year"
+						id="year"
+						required
+						placeholder="YYYY"
+					/>
+				</label>
+			</form>
+			<button type="submit" form="age-calculator-form">
+				<img src="./assets/images/icon-arrow.svg" alt="Submit button" />
+			</button>
+			<div class="calculator__result">
+				<div class="flex">
+					<p class="calculator__number">--</p>
+					<p class="calculator__text">years</p>
+				</div>
+				<div class="flex">
+					<p class="calculator__number">--</p>
+					<p class="calculator__text">months</p>
+				</div>
+				<div class="flex">
+					<p class="calculator__number">--</p>
+					<p class="calculator__text">days</p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
