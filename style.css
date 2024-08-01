@@ -1,14 +1,5 @@
 @import url(reset.css);
-
-@font-face {
-	font-family: "Poppins";
-	src: url("./assets/fonts/Poppins-Bold.ttf"),
-		url("./assets/fonts/Poppins-BoldItalic.ttf"),
-		url(./assets/fonts/Poppins-ExtraBold.ttf),
-		url(./assets/fonts/Poppins-ExtraBoldItalic.ttf),
-		url(./assets/fonts/Poppins-Italic.ttf),
-		url(./assets/fonts/Poppins-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
 
 :root {
 	--clr-primary-purple: hsl(259, 100%, 65%);
@@ -28,8 +19,9 @@
 
 	--fstyle: italic;
 
+	--fs-placeholder: 0.75rem;
 	--fs-input: 2rem;
-	--fs-regular: 1rem;
+	--fs-regular: 4rem;
 }
 
 html {
@@ -45,9 +37,76 @@ body {
 }
 
 .calculator {
-	border-radius: 1rem 1rem 5rem 1rem;
-	padding: 1.5rem;
+	width: 48rem;
+	border-radius: 1.5rem 1.5rem 10rem 1.5rem;
+	padding: 3rem;
 	background-color: var(--clr-neutral-100);
+}
+
+form.flex {
+	gap: 1rem;
+}
+
+.calculator__label {
+	gap: 0.5rem;
+	font-size: var(--fs-placeholder);
+	font-weight: var(--fw-bold);
+	color: var(--clr-neutral-400);
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.calculator__input {
+	max-width: 10rem;
+	border: 1px solid var(--clr-neutral-400);
+	border-radius: 0.3rem;
+	padding: 1rem;
+	font-size: var(--fs-input);
+	font-weight: var(--fw-bold);
+	color: var(--clr-neutral-900);
+	background-color: transparent;
+}
+
+.calculator__input::-webkit-outer-spin-button,
+.calculator__input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.calculator__input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.ruler {
+	border: 0;
+	height: 2px;
+	border-radius: 100vw;
+	width: 100%;
+	background-color: var(--clr-neutral-300);
+}
+
+.calculator__submit-button {
+	border: 0;
+	border-radius: 100vw;
+	padding: 1rem;
+	background-color: var(--clr-primary-purple);
+	cursor: pointer;
+	transition: background-color 100ms ease;
+}
+
+.calculator__submit-button:is(:hover, :focus) {
+	background-color: var(--clr-neutral-900);
+}
+
+.calculator__result {
+	font-size: var(--fs-regular);
+	font-style: italic;
+	font-weight: var(--fw-ex-bold-i);
+}
+
+.calculator__number {
+	color: var(--clr-primary-purple);
+	line-height: 1.1;
 }
 
 .flex {
