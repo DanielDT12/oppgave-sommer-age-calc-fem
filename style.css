@@ -1,0 +1,37 @@
+@import url(reset.css);
+
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins-Bold.ttf"),
+		url("./assets/fonts/Poppins-BoldItalic.ttf"),
+		url(./assets/fonts/Poppins-ExtraBold.ttf),
+		url(./assets/fonts/Poppins-ExtraBoldItalic.ttf),
+		url(./assets/fonts/Poppins-Italic.ttf),
+		url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+:root {
+	--clr-primary-purple: hsl(259, 100%, 65%);
+	--clr-primary-red: hsl(0, 100%, 67%);
+
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-200: hsl(0, 0%, 94%);
+	--clr-neutral-300: hsl(0, 0%, 86%);
+	--clr-neutral-400: hsl(0, 1%, 44%);
+	--clr-neutral-900: hsl(0, 0%, 8%);
+
+	--ff-global: "Poppins", sans-serif;
+
+	--fw-regular-i: 400;
+	--fw-bold: 700;
+	--fw-ex-bold-i: 800;
+
+	--fstyle: italic;
+
+	--fs-input: 2rem;
+	--fs-regular: 1rem;
+}
+
+html {
+	color-scheme: dark light;
+}
